@@ -43,11 +43,15 @@
 
     new-instance v0, Landroidx/lifecycle/MutableLiveData;
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-direct {v0, v1}, Landroidx/lifecycle/MutableLiveData;-><init>(Ljava/lang/Object;)V
 
     sput-object v0, Lp3/j;->c:Landroidx/lifecycle/MutableLiveData;
+
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lp3/j;->j:Z
 
     new-instance v0, Ljava/util/ArrayList;
 

@@ -50,6 +50,13 @@
 .method public static final synthetic a()Z
     .locals 1
 
+    :try_start_0
+    invoke-static {}, Lcom/mixapplications/security/Loader;->loaderNativeLoadData()Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
     const/4 v0, 0x1
 
     return v0

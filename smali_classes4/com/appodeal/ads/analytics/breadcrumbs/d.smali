@@ -1049,7 +1049,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    goto :cond_4
 
     sget-object v0, Lo3/x5;->a:Lo3/x5;
 

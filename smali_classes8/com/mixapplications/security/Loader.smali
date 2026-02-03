@@ -50,9 +50,7 @@
 .method public static final synthetic a()Z
     .locals 1
 
-    invoke-static {}, Lcom/mixapplications/security/Loader;->loaderNativeLoadData()Z
-
-    move-result v0
+    const/4 v0, 0x1
 
     return v0
 .end method
@@ -638,25 +636,9 @@
 .end method
 
 .method private static final showUpdateDialog(Ljava/lang/String;Z)V
-    .locals 4
+    .locals 0
     .annotation build Landroidx/annotation/Keep;
     .end annotation
-
-    invoke-static {}, Lge/c0;->d()Lsc/a;
-
-    move-result-object v0
-
-    new-instance v1, Ln4/a;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, p0, p1, v3, v2}, Ln4/a;-><init>(Ljava/lang/String;ZLkotlin/coroutines/Continuation;I)V
-
-    const/4 p0, 0x3
-
-    invoke-static {v0, v3, v3, v1, p0}, Lge/c0;->G(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lge/a0;Lkotlin/jvm/functions/Function2;I)Lge/r1;
 
     return-void
 .end method

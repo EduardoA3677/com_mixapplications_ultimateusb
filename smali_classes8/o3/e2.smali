@@ -25,7 +25,7 @@
 
     new-instance v0, Landroidx/lifecycle/MutableLiveData;
 
-    const/4 v1, 0x0
+    const v1, 0x98967f
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -37,7 +37,7 @@
 
     new-instance v3, Landroidx/lifecycle/MutableLiveData;
 
-    const-string v4, ""
+    const-string v4, "lifetime"
 
     invoke-direct {v3, v4}, Landroidx/lifecycle/MutableLiveData;-><init>(Ljava/lang/Object;)V
 

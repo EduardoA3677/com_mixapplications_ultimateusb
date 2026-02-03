@@ -1,0 +1,191 @@
+.class abstract Lcom/google/common/collect/EnumMultiset$Itr;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Ljava/util/Iterator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/common/collect/EnumMultiset;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x401
+    name = "Itr"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Ljava/util/Iterator<",
+        "TT;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field public a:I
+
+.field public b:I
+
+.field public final synthetic c:Lcom/google/common/collect/EnumMultiset;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/common/collect/EnumMultiset;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/common/collect/EnumMultiset$Itr;->c:Lcom/google/common/collect/EnumMultiset;
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lcom/google/common/collect/EnumMultiset$Itr;->a:I
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lcom/google/common/collect/EnumMultiset$Itr;->b:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract a(I)Ljava/lang/Object;
+.end method
+
+.method public hasNext()Z
+    .locals 3
+
+    :goto_0
+    iget v0, p0, Lcom/google/common/collect/EnumMultiset$Itr;->a:I
+
+    iget-object v1, p0, Lcom/google/common/collect/EnumMultiset$Itr;->c:Lcom/google/common/collect/EnumMultiset;
+
+    iget-object v2, v1, Lcom/google/common/collect/EnumMultiset;->d:[Ljava/lang/Enum;
+
+    array-length v2, v2
+
+    if-ge v0, v2, :cond_1
+
+    iget-object v1, v1, Lcom/google/common/collect/EnumMultiset;->e:[I
+
+    aget v1, v1, v0
+
+    if-lez v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/google/common/collect/EnumMultiset$Itr;->a:I
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public next()Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/common/collect/EnumMultiset$Itr;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/google/common/collect/EnumMultiset$Itr;->a:I
+
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/EnumMultiset$Itr;->a(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/google/common/collect/EnumMultiset$Itr;->a:I
+
+    iput v1, p0, Lcom/google/common/collect/EnumMultiset$Itr;->b:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, p0, Lcom/google/common/collect/EnumMultiset$Itr;->a:I
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public remove()V
+    .locals 9
+
+    iget v0, p0, Lcom/google/common/collect/EnumMultiset$Itr;->b:I
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-ltz v0, :cond_0
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    invoke-static {v0}, Lcom/google/common/collect/CollectPreconditions;->e(Z)V
+
+    iget-object v0, p0, Lcom/google/common/collect/EnumMultiset$Itr;->c:Lcom/google/common/collect/EnumMultiset;
+
+    iget-object v3, v0, Lcom/google/common/collect/EnumMultiset;->e:[I
+
+    iget v4, p0, Lcom/google/common/collect/EnumMultiset$Itr;->b:I
+
+    aget v5, v3, v4
+
+    if-lez v5, :cond_1
+
+    iget v6, v0, Lcom/google/common/collect/EnumMultiset;->f:I
+
+    sub-int/2addr v6, v2
+
+    iput v6, v0, Lcom/google/common/collect/EnumMultiset;->f:I
+
+    int-to-long v5, v5
+
+    iget-wide v7, v0, Lcom/google/common/collect/EnumMultiset;->g:J
+
+    sub-long/2addr v7, v5
+
+    iput-wide v7, v0, Lcom/google/common/collect/EnumMultiset;->g:J
+
+    aput v1, v3, v4
+
+    :cond_1
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/google/common/collect/EnumMultiset$Itr;->b:I
+
+    return-void
+.end method

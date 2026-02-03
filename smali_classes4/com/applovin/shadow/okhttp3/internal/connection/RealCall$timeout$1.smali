@@ -1,0 +1,62 @@
+.class public final Lcom/applovin/shadow/okhttp3/internal/connection/RealCall$timeout$1;
+.super Lcom/applovin/shadow/okio/AsyncTimeout;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/applovin/shadow/okhttp3/internal/connection/RealCall;-><init>(Lcom/applovin/shadow/okhttp3/OkHttpClient;Lcom/applovin/shadow/okhttp3/Request;Z)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0011\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0008\u0010\u0002\u001a\u00020\u0003H\u0014\u00a8\u0006\u0004"
+    }
+    d2 = {
+        "com/applovin/shadow/okhttp3/internal/connection/RealCall$timeout$1",
+        "Lcom/applovin/shadow/okio/AsyncTimeout;",
+        "timedOut",
+        "",
+        "okhttp"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/applovin/shadow/okhttp3/internal/connection/RealCall;
+
+
+# direct methods
+.method public constructor <init>(Lcom/applovin/shadow/okhttp3/internal/connection/RealCall;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/applovin/shadow/okhttp3/internal/connection/RealCall$timeout$1;->this$0:Lcom/applovin/shadow/okhttp3/internal/connection/RealCall;
+
+    invoke-direct {p0}, Lcom/applovin/shadow/okio/AsyncTimeout;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public timedOut()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/applovin/shadow/okhttp3/internal/connection/RealCall$timeout$1;->this$0:Lcom/applovin/shadow/okhttp3/internal/connection/RealCall;
+
+    invoke-virtual {v0}, Lcom/applovin/shadow/okhttp3/internal/connection/RealCall;->cancel()V
+
+    return-void
+.end method

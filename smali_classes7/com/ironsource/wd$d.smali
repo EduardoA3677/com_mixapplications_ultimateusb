@@ -1,0 +1,109 @@
+.class Lcom/ironsource/wd$d;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/ironsource/wd;->a(Lcom/ironsource/mediationsdk/logger/IronSourceError;Lcom/ironsource/mediationsdk/adunit/adapter/utility/AdInfo;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/ironsource/mediationsdk/logger/IronSourceError;
+
+.field final synthetic b:Lcom/ironsource/mediationsdk/adunit/adapter/utility/AdInfo;
+
+.field final synthetic c:Lcom/ironsource/wd;
+
+
+# direct methods
+.method public constructor <init>(Lcom/ironsource/wd;Lcom/ironsource/mediationsdk/logger/IronSourceError;Lcom/ironsource/mediationsdk/adunit/adapter/utility/AdInfo;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/ironsource/wd$d;->c:Lcom/ironsource/wd;
+
+    iput-object p2, p0, Lcom/ironsource/wd$d;->a:Lcom/ironsource/mediationsdk/logger/IronSourceError;
+
+    iput-object p3, p0, Lcom/ironsource/wd$d;->b:Lcom/ironsource/mediationsdk/adunit/adapter/utility/AdInfo;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 4
+
+    iget-object v0, p0, Lcom/ironsource/wd$d;->c:Lcom/ironsource/wd;
+
+    invoke-static {v0}, Lcom/ironsource/wd;->c(Lcom/ironsource/wd;)Lcom/ironsource/pb;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v2, p0, Lcom/ironsource/wd$d;->a:Lcom/ironsource/mediationsdk/logger/IronSourceError;
+
+    iget-object v3, p0, Lcom/ironsource/wd$d;->b:Lcom/ironsource/mediationsdk/adunit/adapter/utility/AdInfo;
+
+    invoke-static {v0, v3}, Lcom/ironsource/wd;->n(Lcom/ironsource/wd;Lcom/ironsource/mediationsdk/adunit/adapter/utility/AdInfo;)Lcom/ironsource/mediationsdk/adunit/adapter/utility/AdInfo;
+
+    move-result-object v0
+
+    invoke-interface {v1, v2, v0}, Lcom/ironsource/pb;->a(Lcom/ironsource/mediationsdk/logger/IronSourceError;Lcom/ironsource/mediationsdk/adunit/adapter/utility/AdInfo;)V
+
+    sget-object v0, Lcom/ironsource/mediationsdk/logger/IronLog;->CALLBACK:Lcom/ironsource/mediationsdk/logger/IronLog;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "onAdShowFailed() adInfo = "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/ironsource/wd$d;->c:Lcom/ironsource/wd;
+
+    iget-object v3, p0, Lcom/ironsource/wd$d;->b:Lcom/ironsource/mediationsdk/adunit/adapter/utility/AdInfo;
+
+    invoke-static {v2, v3}, Lcom/ironsource/wd;->o(Lcom/ironsource/wd;Lcom/ironsource/mediationsdk/adunit/adapter/utility/AdInfo;)Lcom/ironsource/mediationsdk/adunit/adapter/utility/AdInfo;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", error = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/ironsource/wd$d;->a:Lcom/ironsource/mediationsdk/logger/IronSourceError;
+
+    invoke-virtual {v2}, Lcom/ironsource/mediationsdk/logger/IronSourceError;->getErrorMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/ironsource/mediationsdk/logger/IronLog;->info(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method

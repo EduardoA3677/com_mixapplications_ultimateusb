@@ -1,0 +1,117 @@
+.class final Landroidx/compose/material/DrawerKt$BottomDrawer$1$1$1;
+.super Lkotlin/jvm/internal/r;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function0;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/compose/material/DrawerKt$BottomDrawer$1;->invoke(Landroidx/compose/foundation/layout/BoxWithConstraintsScope;Landroidx/compose/runtime/Composer;I)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/r;",
+        "Lkotlin/jvm/functions/Function0;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    k = 0x3
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic $drawerState:Landroidx/compose/material/BottomDrawerState;
+
+.field final synthetic $gesturesEnabled:Z
+
+.field final synthetic $scope:Lkotlinx/coroutines/CoroutineScope;
+
+
+# direct methods
+.method public constructor <init>(ZLandroidx/compose/material/BottomDrawerState;Lkotlinx/coroutines/CoroutineScope;)V
+    .locals 0
+
+    iput-boolean p1, p0, Landroidx/compose/material/DrawerKt$BottomDrawer$1$1$1;->$gesturesEnabled:Z
+
+    iput-object p2, p0, Landroidx/compose/material/DrawerKt$BottomDrawer$1$1$1;->$drawerState:Landroidx/compose/material/BottomDrawerState;
+
+    iput-object p3, p0, Landroidx/compose/material/DrawerKt$BottomDrawer$1$1$1;->$scope:Lkotlinx/coroutines/CoroutineScope;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/r;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Landroidx/compose/material/DrawerKt$BottomDrawer$1$1$1;->invoke()V
+
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object v0
+.end method
+
+.method public final invoke()V
+    .locals 4
+
+    iget-boolean v0, p0, Landroidx/compose/material/DrawerKt$BottomDrawer$1$1$1;->$gesturesEnabled:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroidx/compose/material/DrawerKt$BottomDrawer$1$1$1;->$drawerState:Landroidx/compose/material/BottomDrawerState;
+
+    invoke-virtual {v0}, Landroidx/compose/material/SwipeableState;->getConfirmStateChange$material_release()Lkotlin/jvm/functions/Function1;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/compose/material/BottomDrawerValue;->Closed:Landroidx/compose/material/BottomDrawerValue;
+
+    invoke-interface {v0, v1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroidx/compose/material/DrawerKt$BottomDrawer$1$1$1;->$scope:Lkotlinx/coroutines/CoroutineScope;
+
+    new-instance v1, Landroidx/compose/material/DrawerKt$BottomDrawer$1$1$1$1;
+
+    iget-object v2, p0, Landroidx/compose/material/DrawerKt$BottomDrawer$1$1$1;->$drawerState:Landroidx/compose/material/BottomDrawerState;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v3}, Landroidx/compose/material/DrawerKt$BottomDrawer$1$1$1$1;-><init>(Landroidx/compose/material/BottomDrawerState;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v3, v3, v1, v2}, Lge/c0;->G(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lge/a0;Lkotlin/jvm/functions/Function2;I)Lge/r1;
+
+    :cond_0
+    return-void
+.end method

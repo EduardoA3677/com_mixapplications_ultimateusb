@@ -1,0 +1,27 @@
+.class public final Lcom/applovin/mediation/adapters/ironsource/BuildConfig;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# static fields
+.field public static final BUILD_TYPE:Ljava/lang/String; = "release"
+
+.field public static final DEBUG:Z = false
+
+.field public static final FLAVOR:Ljava/lang/String; = "standalone"
+
+.field public static final IS_TEST_APP:Z = false
+
+.field public static final LIBRARY_PACKAGE_NAME:Ljava/lang/String; = "com.applovin.mediation.adapters.ironsource"
+
+.field public static final VERSION_NAME:Ljava/lang/String; = "9.1.0.0.0"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

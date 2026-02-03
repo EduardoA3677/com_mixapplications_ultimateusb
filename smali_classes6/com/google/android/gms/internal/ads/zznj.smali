@@ -1,0 +1,48 @@
+.class final synthetic Lcom/google/android/gms/internal/ads/zznj;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzdy;
+
+
+# instance fields
+.field private final synthetic zza:Lcom/google/android/gms/internal/ads/zzmy;
+
+.field private final synthetic zzb:Lcom/google/android/gms/internal/ads/zzv;
+
+.field private final synthetic zzc:Lcom/google/android/gms/internal/ads/zzio;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/android/gms/internal/ads/zzmy;Lcom/google/android/gms/internal/ads/zzv;Lcom/google/android/gms/internal/ads/zzio;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/ads/zznj;->zza:Lcom/google/android/gms/internal/ads/zzmy;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/ads/zznj;->zzb:Lcom/google/android/gms/internal/ads/zzv;
+
+    iput-object p3, p0, Lcom/google/android/gms/internal/ads/zznj;->zzc:Lcom/google/android/gms/internal/ads/zzio;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic zza(Ljava/lang/Object;)V
+    .locals 3
+
+    check-cast p1, Lcom/google/android/gms/internal/ads/zzna;
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zznj;->zza:Lcom/google/android/gms/internal/ads/zzmy;
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/ads/zznj;->zzb:Lcom/google/android/gms/internal/ads/zzv;
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/ads/zznj;->zzc:Lcom/google/android/gms/internal/ads/zzio;
+
+    invoke-interface {p1, v0, v1, v2}, Lcom/google/android/gms/internal/ads/zzna;->zzl(Lcom/google/android/gms/internal/ads/zzmy;Lcom/google/android/gms/internal/ads/zzv;Lcom/google/android/gms/internal/ads/zzio;)V
+
+    return-void
+.end method

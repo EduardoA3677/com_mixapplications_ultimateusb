@@ -1,0 +1,121 @@
+.class Lcom/bytedance/adsdk/ud/mo$2;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/bytedance/adsdk/ud/mo;->ud(Ljava/lang/String;)Lcom/bytedance/adsdk/ud/exu;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/concurrent/Callable<",
+        "Lcom/bytedance/adsdk/ud/fs<",
+        "Lcom/bytedance/adsdk/ud/wd;",
+        ">;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic qdl:Ljava/lang/String;
+
+.field final synthetic ud:Lcom/bytedance/adsdk/ud/mo;
+
+
+# direct methods
+.method public constructor <init>(Lcom/bytedance/adsdk/ud/mo;Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/bytedance/adsdk/ud/mo$2;->ud:Lcom/bytedance/adsdk/ud/mo;
+
+    iput-object p2, p0, Lcom/bytedance/adsdk/ud/mo$2;->qdl:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public synthetic call()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/bytedance/adsdk/ud/mo$2;->qdl()Lcom/bytedance/adsdk/ud/fs;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public qdl()Lcom/bytedance/adsdk/ud/fs;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/bytedance/adsdk/ud/fs<",
+            "Lcom/bytedance/adsdk/ud/wd;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/bytedance/adsdk/ud/mo$2;->ud:Lcom/bytedance/adsdk/ud/mo;
+
+    invoke-static {v0}, Lcom/bytedance/adsdk/ud/mo;->rdp(Lcom/bytedance/adsdk/ud/mo;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bytedance/adsdk/ud/mo$2;->ud:Lcom/bytedance/adsdk/ud/mo;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bytedance/adsdk/ud/mo$2;->qdl:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lcom/bytedance/adsdk/ud/jpc;->lnr(Landroid/content/Context;Ljava/lang/String;)Lcom/bytedance/adsdk/ud/fs;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/bytedance/adsdk/ud/mo$2;->ud:Lcom/bytedance/adsdk/ud/mo;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bytedance/adsdk/ud/mo$2;->qdl:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/bytedance/adsdk/ud/jpc;->lnr(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/bytedance/adsdk/ud/fs;
+
+    move-result-object v0
+
+    return-object v0
+.end method

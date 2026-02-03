@@ -1,0 +1,50 @@
+.class final synthetic Lcom/google/android/gms/internal/ads/zzhkx;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzhkz;
+
+
+# instance fields
+.field private final synthetic zza:Lcom/google/android/gms/internal/ads/zzhky;
+
+.field private final synthetic zzb:Lcom/google/android/gms/internal/ads/zzhla;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/android/gms/internal/ads/zzhky;Lcom/google/android/gms/internal/ads/zzhla;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/ads/zzhkx;->zza:Lcom/google/android/gms/internal/ads/zzhky;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/ads/zzhkx;->zzb:Lcom/google/android/gms/internal/ads/zzhla;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic zza(Lcom/google/android/gms/internal/ads/zzhbi;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzhkx;->zza:Lcom/google/android/gms/internal/ads/zzhky;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/ads/zzhbi;->zza()Lcom/google/android/gms/internal/ads/zzhaz;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/ads/zzhkx;->zzb:Lcom/google/android/gms/internal/ads/zzhla;
+
+    invoke-interface {v1}, Lcom/google/android/gms/internal/ads/zzhla;->zzb()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p1, v1}, Lcom/google/android/gms/internal/ads/zzhky;->zzb(Lcom/google/android/gms/internal/ads/zzhaz;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

@@ -1,0 +1,22 @@
+.class public final synthetic Landroidx/media3/exoplayer/offline/g;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Ljava/util/Comparator;
+
+
+# virtual methods
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 0
+
+    check-cast p1, Landroidx/media3/exoplayer/offline/Download;
+
+    check-cast p2, Landroidx/media3/exoplayer/offline/Download;
+
+    invoke-static {p1, p2}, Landroidx/media3/exoplayer/offline/DownloadManager$InternalHandler;->a(Landroidx/media3/exoplayer/offline/Download;Landroidx/media3/exoplayer/offline/Download;)I
+
+    move-result p1
+
+    return p1
+.end method

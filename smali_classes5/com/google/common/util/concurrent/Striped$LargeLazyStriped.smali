@@ -1,0 +1,147 @@
+.class final Lcom/google/common/util/concurrent/Striped$LargeLazyStriped;
+.super Lcom/google/common/util/concurrent/Striped$PowerOfTwoStriped;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# annotations
+.annotation build Lcom/google/common/annotations/VisibleForTesting;
+.end annotation
+
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/common/util/concurrent/Striped;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "LargeLazyStriped"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<",
+        "L:Ljava/lang/Object;",
+        ">",
+        "Lcom/google/common/util/concurrent/Striped$PowerOfTwoStriped<",
+        "T",
+        "L;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final b:Ljava/util/concurrent/ConcurrentMap;
+
+.field public final c:Lcom/google/common/base/Supplier;
+
+.field public final d:I
+
+
+# direct methods
+.method public constructor <init>(ILcom/google/common/base/Supplier;)V
+    .locals 1
+
+    invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/Striped$PowerOfTwoStriped;-><init>(I)V
+
+    iget p1, p0, Lcom/google/common/util/concurrent/Striped$PowerOfTwoStriped;->a:I
+
+    const/4 v0, -0x1
+
+    if-ne p1, v0, :cond_0
+
+    const p1, 0x7fffffff
+
+    goto :goto_0
+
+    :cond_0
+    add-int/lit8 p1, p1, 0x1
+
+    :goto_0
+    iput p1, p0, Lcom/google/common/util/concurrent/Striped$LargeLazyStriped;->d:I
+
+    iput-object p2, p0, Lcom/google/common/util/concurrent/Striped$LargeLazyStriped;->c:Lcom/google/common/base/Supplier;
+
+    new-instance p1, Lcom/google/common/collect/MapMaker;
+
+    invoke-direct {p1}, Lcom/google/common/collect/MapMaker;-><init>()V
+
+    invoke-virtual {p1}, Lcom/google/common/collect/MapMaker;->weakValues()Lcom/google/common/collect/MapMaker;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/google/common/collect/MapMaker;->makeMap()Ljava/util/concurrent/ConcurrentMap;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/common/util/concurrent/Striped$LargeLazyStriped;->b:Ljava/util/concurrent/ConcurrentMap;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getAt(I)Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)T",
+            "L;"
+        }
+    .end annotation
+
+    iget v0, p0, Lcom/google/common/util/concurrent/Striped$LargeLazyStriped;->d:I
+
+    const v1, 0x7fffffff
+
+    if-eq v0, v1, :cond_0
+
+    invoke-virtual {p0}, Lcom/google/common/util/concurrent/Striped$LargeLazyStriped;->size()I
+
+    move-result v0
+
+    invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkElementIndex(II)I
+
+    :cond_0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/google/common/util/concurrent/Striped$LargeLazyStriped;->b:Ljava/util/concurrent/ConcurrentMap;
+
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    :cond_1
+    iget-object v0, p0, Lcom/google/common/util/concurrent/Striped$LargeLazyStriped;->c:Lcom/google/common/base/Supplier;
+
+    invoke-interface {v0}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {v1, p1, v0}, Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-static {p1, v0}, Lcom/google/common/base/MoreObjects;->firstNonNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public size()I
+    .locals 1
+
+    iget v0, p0, Lcom/google/common/util/concurrent/Striped$LargeLazyStriped;->d:I
+
+    return v0
+.end method

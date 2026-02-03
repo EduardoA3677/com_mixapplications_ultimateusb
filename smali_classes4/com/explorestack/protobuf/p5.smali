@@ -1,0 +1,8 @@
+.class public abstract Lcom/explorestack/protobuf/p5;
+.super Lcom/explorestack/protobuf/q5;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# virtual methods
+.method public abstract a()Lcom/explorestack/protobuf/MessageLite;
+.end method

@@ -1,0 +1,96 @@
+.class public interface abstract Landroidx/compose/runtime/external/kotlinx/collections/immutable/ImmutableMap;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Ljava/util/Map;
+.implements Lwd/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Ljava/util/Map<",
+        "TK;TV;>;",
+        "Lwd/a;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000&\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010$\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010&\n\u0002\u0008\u0002\u0008`\u0018\u0000*\u0004\u0008\u0000\u0010\u0001*\u0006\u0008\u0001\u0010\u0002 \u00012\u000e\u0012\u0004\u0012\u0002H\u0001\u0012\u0004\u0012\u0002H\u00020\u0003R\u0018\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0005X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0006\u0010\u0007R\u0018\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00028\u00010\tX\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\n\u0010\u000bR$\u0010\u000c\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u00010\r0\u0005X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u000e\u0010\u0007\u00f8\u0001\u0000\u0082\u0002\u0006\n\u0004\u0008!0\u0001\u00a8\u0006\u000f\u00c0\u0006\u0001"
+    }
+    d2 = {
+        "Landroidx/compose/runtime/external/kotlinx/collections/immutable/ImmutableMap;",
+        "K",
+        "V",
+        "",
+        "keys",
+        "Landroidx/compose/runtime/external/kotlinx/collections/immutable/ImmutableSet;",
+        "getKeys",
+        "()Landroidx/compose/runtime/external/kotlinx/collections/immutable/ImmutableSet;",
+        "values",
+        "Landroidx/compose/runtime/external/kotlinx/collections/immutable/ImmutableCollection;",
+        "getValues",
+        "()Landroidx/compose/runtime/external/kotlinx/collections/immutable/ImmutableCollection;",
+        "entries",
+        "",
+        "getEntries",
+        "runtime"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x0,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# virtual methods
+.method public abstract getEntries()Landroidx/compose/runtime/external/kotlinx/collections/immutable/ImmutableSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/compose/runtime/external/kotlinx/collections/immutable/ImmutableSet<",
+            "Ljava/util/Map$Entry<",
+            "TK;TV;>;>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end method
+
+.method public abstract getKeys()Landroidx/compose/runtime/external/kotlinx/collections/immutable/ImmutableSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/compose/runtime/external/kotlinx/collections/immutable/ImmutableSet<",
+            "TK;>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end method
+
+.method public abstract getValues()Landroidx/compose/runtime/external/kotlinx/collections/immutable/ImmutableCollection;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/compose/runtime/external/kotlinx/collections/immutable/ImmutableCollection<",
+            "TV;>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end method

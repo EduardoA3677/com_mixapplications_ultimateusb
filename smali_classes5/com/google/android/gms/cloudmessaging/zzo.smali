@@ -1,0 +1,130 @@
+.class final Lcom/google/android/gms/cloudmessaging/zzo;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# instance fields
+.field private final zza:Landroid/os/Messenger;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field private final zzb:Lcom/google/android/gms/cloudmessaging/zza;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-interface {p1}, Landroid/os/IBinder;->getInterfaceDescriptor()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "android.os.IMessenger"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    new-instance v0, Landroid/os/Messenger;
+
+    invoke-direct {v0, p1}, Landroid/os/Messenger;-><init>(Landroid/os/IBinder;)V
+
+    iput-object v0, p0, Lcom/google/android/gms/cloudmessaging/zzo;->zza:Landroid/os/Messenger;
+
+    iput-object v2, p0, Lcom/google/android/gms/cloudmessaging/zzo;->zzb:Lcom/google/android/gms/cloudmessaging/zza;
+
+    return-void
+
+    :cond_0
+    const-string v1, "com.google.android.gms.iid.IMessengerCompat"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v0, Lcom/google/android/gms/cloudmessaging/zza;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/cloudmessaging/zza;-><init>(Landroid/os/IBinder;)V
+
+    iput-object v0, p0, Lcom/google/android/gms/cloudmessaging/zzo;->zzb:Lcom/google/android/gms/cloudmessaging/zza;
+
+    iput-object v2, p0, Lcom/google/android/gms/cloudmessaging/zzo;->zza:Landroid/os/Messenger;
+
+    return-void
+
+    :cond_1
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const-string v0, "Invalid interface descriptor: "
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    :cond_2
+    new-instance p1, Landroid/os/RemoteException;
+
+    invoke-direct {p1}, Landroid/os/RemoteException;-><init>()V
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final zza(Landroid/os/Message;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/cloudmessaging/zzo;->zza:Landroid/os/Messenger;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/cloudmessaging/zzo;->zzb:Lcom/google/android/gms/cloudmessaging/zza;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/cloudmessaging/zza;->zza(Landroid/os/Message;)V
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Both messengers are null"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method

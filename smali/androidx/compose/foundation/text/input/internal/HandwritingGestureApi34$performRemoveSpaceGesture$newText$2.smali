@@ -1,0 +1,129 @@
+.class final Landroidx/compose/foundation/text/input/internal/HandwritingGestureApi34$performRemoveSpaceGesture$newText$2;
+.super Lkotlin/jvm/internal/r;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/compose/foundation/text/input/internal/HandwritingGestureApi34;->performRemoveSpaceGesture(Landroidx/compose/foundation/text/LegacyTextFieldState;Landroid/view/inputmethod/RemoveSpaceGesture;Landroidx/compose/ui/text/AnnotatedString;Landroidx/compose/ui/platform/ViewConfiguration;Lkotlin/jvm/functions/Function1;)I
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/r;",
+        "Lkotlin/jvm/functions/Function1;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\r\n\u0002\u0008\u0003\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
+    }
+    d2 = {
+        "Lde/f;",
+        "it",
+        "",
+        "invoke",
+        "(Lde/f;)Ljava/lang/CharSequence;",
+        "<anonymous>"
+    }
+    k = 0x3
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic $firstMatchStart:Lkotlin/jvm/internal/j0;
+
+.field final synthetic $lastMatchEnd:Lkotlin/jvm/internal/j0;
+
+
+# direct methods
+.method public constructor <init>(Lkotlin/jvm/internal/j0;Lkotlin/jvm/internal/j0;)V
+    .locals 0
+
+    iput-object p1, p0, Landroidx/compose/foundation/text/input/internal/HandwritingGestureApi34$performRemoveSpaceGesture$newText$2;->$firstMatchStart:Lkotlin/jvm/internal/j0;
+
+    iput-object p2, p0, Landroidx/compose/foundation/text/input/internal/HandwritingGestureApi34$performRemoveSpaceGesture$newText$2;->$lastMatchEnd:Lkotlin/jvm/internal/j0;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/r;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Lde/f;)Ljava/lang/CharSequence;
+    .locals 3
+    .param p1    # Lde/f;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object v0, p0, Landroidx/compose/foundation/text/input/internal/HandwritingGestureApi34$performRemoveSpaceGesture$newText$2;->$firstMatchStart:Lkotlin/jvm/internal/j0;
+
+    iget v1, v0, Lkotlin/jvm/internal/j0;->a:I
+
+    const/4 v2, -0x1
+
+    if-ne v1, v2, :cond_0
+
+    move-object v1, p1
+
+    check-cast v1, Lde/h;
+
+    invoke-virtual {v1}, Lde/h;->b()Lbe/i;
+
+    move-result-object v1
+
+    iget v1, v1, Lbe/g;->a:I
+
+    iput v1, v0, Lkotlin/jvm/internal/j0;->a:I
+
+    :cond_0
+    iget-object v0, p0, Landroidx/compose/foundation/text/input/internal/HandwritingGestureApi34$performRemoveSpaceGesture$newText$2;->$lastMatchEnd:Lkotlin/jvm/internal/j0;
+
+    check-cast p1, Lde/h;
+
+    invoke-virtual {p1}, Lde/h;->b()Lbe/i;
+
+    move-result-object p1
+
+    iget p1, p1, Lbe/g;->b:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, v0, Lkotlin/jvm/internal/j0;->a:I
+
+    const-string p1, ""
+
+    return-object p1
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lde/f;
+
+    invoke-virtual {p0, p1}, Landroidx/compose/foundation/text/input/internal/HandwritingGestureApi34$performRemoveSpaceGesture$newText$2;->invoke(Lde/f;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    return-object p1
+.end method

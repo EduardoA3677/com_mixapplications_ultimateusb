@@ -1,0 +1,94 @@
+.class final Lcom/google/android/gms/internal/ads/zzidm;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# static fields
+.field private static final zza:Lcom/google/android/gms/internal/ads/zzidm;
+
+
+# instance fields
+.field private final zzb:Lcom/google/android/gms/internal/ads/zzidv;
+
+.field private final zzc:Ljava/util/concurrent/ConcurrentMap;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzidm;
+
+    invoke-direct {v0}, Lcom/google/android/gms/internal/ads/zzidm;-><init>()V
+
+    sput-object v0, Lcom/google/android/gms/internal/ads/zzidm;->zza:Lcom/google/android/gms/internal/ads/zzidm;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/ads/zzidm;->zzc:Ljava/util/concurrent/ConcurrentMap;
+
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzict;
+
+    invoke-direct {v0}, Lcom/google/android/gms/internal/ads/zzict;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/ads/zzidm;->zzb:Lcom/google/android/gms/internal/ads/zzidv;
+
+    return-void
+.end method
+
+.method public static zza()Lcom/google/android/gms/internal/ads/zzidm;
+    .locals 1
+
+    sget-object v0, Lcom/google/android/gms/internal/ads/zzidm;->zza:Lcom/google/android/gms/internal/ads/zzidm;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final zzb(Ljava/lang/Class;)Lcom/google/android/gms/internal/ads/zzidu;
+    .locals 2
+
+    const-string v0, "messageType"
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/internal/ads/zzice;->zza(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzidm;->zzc:Ljava/util/concurrent/ConcurrentMap;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/google/android/gms/internal/ads/zzidu;
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/ads/zzidm;->zzb:Lcom/google/android/gms/internal/ads/zzidv;
+
+    invoke-interface {v1, p1}, Lcom/google/android/gms/internal/ads/zzidv;->zza(Ljava/lang/Class;)Lcom/google/android/gms/internal/ads/zzidu;
+
+    move-result-object v1
+
+    invoke-interface {v0, p1, v1}, Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/internal/ads/zzidu;
+
+    if-eqz p1, :cond_0
+
+    return-object p1
+
+    :cond_0
+    return-object v1
+.end method

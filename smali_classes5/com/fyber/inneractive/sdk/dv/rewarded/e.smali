@@ -1,0 +1,99 @@
+.class public final Lcom/fyber/inneractive/sdk/dv/rewarded/e;
+.super Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# instance fields
+.field public final synthetic a:Lcom/fyber/inneractive/sdk/dv/rewarded/g;
+
+
+# direct methods
+.method public constructor <init>(Lcom/fyber/inneractive/sdk/dv/rewarded/g;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/fyber/inneractive/sdk/dv/rewarded/e;->a:Lcom/fyber/inneractive/sdk/dv/rewarded/g;
+
+    invoke-direct {p0}, Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onRewardedAdFailedToLoad(I)V
+    .locals 5
+
+    iget-object v0, p0, Lcom/fyber/inneractive/sdk/dv/rewarded/e;->a:Lcom/fyber/inneractive/sdk/dv/rewarded/g;
+
+    iget-object v0, v0, Lcom/fyber/inneractive/sdk/dv/a;->g:Lcom/fyber/inneractive/sdk/dv/c;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lcom/fyber/inneractive/sdk/dv/c;->j()V
+
+    iget-object v0, p0, Lcom/fyber/inneractive/sdk/dv/rewarded/e;->a:Lcom/fyber/inneractive/sdk/dv/rewarded/g;
+
+    iget-object v0, v0, Lcom/fyber/inneractive/sdk/flow/x;->a:Lcom/fyber/inneractive/sdk/external/InneractiveAdRequest;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/fyber/inneractive/sdk/external/InneractiveAdRequest;->getSpotId()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    sget-object v1, Lcom/fyber/inneractive/sdk/dv/enums/a;->Load:Lcom/fyber/inneractive/sdk/dv/enums/a;
+
+    iget-object v2, p0, Lcom/fyber/inneractive/sdk/dv/rewarded/e;->a:Lcom/fyber/inneractive/sdk/dv/rewarded/g;
+
+    iget-object v3, v2, Lcom/fyber/inneractive/sdk/flow/x;->a:Lcom/fyber/inneractive/sdk/external/InneractiveAdRequest;
+
+    iget-object v2, v2, Lcom/fyber/inneractive/sdk/flow/x;->b:Lcom/fyber/inneractive/sdk/response/e;
+
+    check-cast v2, Lcom/fyber/inneractive/sdk/dv/i;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v4, "errorCode - %d"
+
+    invoke-static {v4, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, v1, v3, v2, p1}, Lcom/fyber/inneractive/sdk/dv/handler/e;->a(Ljava/lang/String;Lcom/fyber/inneractive/sdk/dv/enums/a;Lcom/fyber/inneractive/sdk/external/InneractiveAdRequest;Lcom/fyber/inneractive/sdk/response/e;Ljava/lang/String;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onRewardedAdLoaded()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/fyber/inneractive/sdk/dv/rewarded/e;->a:Lcom/fyber/inneractive/sdk/dv/rewarded/g;
+
+    iget-object v1, v0, Lcom/fyber/inneractive/sdk/dv/a;->g:Lcom/fyber/inneractive/sdk/dv/c;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Lcom/fyber/inneractive/sdk/a;->g()V
+
+    iget-object v0, p0, Lcom/fyber/inneractive/sdk/dv/rewarded/e;->a:Lcom/fyber/inneractive/sdk/dv/rewarded/g;
+
+    iget-object v0, v0, Lcom/fyber/inneractive/sdk/dv/a;->g:Lcom/fyber/inneractive/sdk/dv/c;
+
+    invoke-virtual {v0}, Lcom/fyber/inneractive/sdk/flow/k;->g()V
+
+    :cond_0
+    return-void
+.end method

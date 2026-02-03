@@ -1,0 +1,58 @@
+.class Lcom/google/android/gms/internal/ads/zzbgj$zzaf$zzd$1;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzibw;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/gms/internal/ads/zzbgj$zzaf$zzd;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/google/android/gms/internal/ads/zzibw<",
+        "Lcom/google/android/gms/internal/ads/zzbgj$zzaf$zzd;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public zza(I)Lcom/google/android/gms/internal/ads/zzbgj$zzaf$zzd;
+    .locals 0
+
+    invoke-static {p1}, Lcom/google/android/gms/internal/ads/zzbgj$zzaf$zzd;->zzc(I)Lcom/google/android/gms/internal/ads/zzbgj$zzaf$zzd;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic zzb(I)Lcom/google/android/gms/internal/ads/zzibv;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/ads/zzbgj$zzaf$zzd$1;->zza(I)Lcom/google/android/gms/internal/ads/zzbgj$zzaf$zzd;
+
+    move-result-object p1
+
+    return-object p1
+.end method

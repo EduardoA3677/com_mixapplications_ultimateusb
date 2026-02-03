@@ -1,0 +1,40 @@
+.class public final synthetic Lcom/google/android/exoplayer2/ui/l;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Lcom/google/android/exoplayer2/ui/TrackSelectionDialogBuilder$DialogCallback;
+
+
+# instance fields
+.field public final synthetic a:Lcom/google/android/exoplayer2/Player;
+
+.field public final synthetic b:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/android/exoplayer2/Player;I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/exoplayer2/ui/l;->a:Lcom/google/android/exoplayer2/Player;
+
+    iput p2, p0, Lcom/google/android/exoplayer2/ui/l;->b:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onTracksSelected(ZLjava/util/Map;)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/google/android/exoplayer2/ui/l;->a:Lcom/google/android/exoplayer2/Player;
+
+    iget v1, p0, Lcom/google/android/exoplayer2/ui/l;->b:I
+
+    invoke-static {v0, v1, p1, p2}, Lcom/google/android/exoplayer2/ui/TrackSelectionDialogBuilder;->a(Lcom/google/android/exoplayer2/Player;IZLjava/util/Map;)V
+
+    return-void
+.end method

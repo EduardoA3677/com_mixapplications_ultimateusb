@@ -1,0 +1,103 @@
+.class public final Lcom/google/android/gms/internal/measurement/zzji;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# static fields
+.field private static zza:Lcom/google/android/gms/internal/measurement/zzjh;
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "GservicesDelegateSupplier.class"
+    .end annotation
+
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public static declared-synchronized zza(Lcom/google/android/gms/internal/measurement/zzjh;)V
+    .locals 2
+
+    const-class v0, Lcom/google/android/gms/internal/measurement/zzji;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lcom/google/android/gms/internal/measurement/zzji;->zza:Lcom/google/android/gms/internal/measurement/zzjh;
+
+    if-nez v1, :cond_0
+
+    sput-object p0, Lcom/google/android/gms/internal/measurement/zzji;->zza:Lcom/google/android/gms/internal/measurement/zzjh;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "init() already called"
+
+    invoke-direct {p0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :goto_0
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+.method public static declared-synchronized zzb()Lcom/google/android/gms/internal/measurement/zzjh;
+    .locals 2
+
+    const-class v0, Lcom/google/android/gms/internal/measurement/zzji;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lcom/google/android/gms/internal/measurement/zzji;->zza:Lcom/google/android/gms/internal/measurement/zzjh;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lcom/google/android/gms/internal/measurement/zzjl;
+
+    invoke-direct {v1}, Lcom/google/android/gms/internal/measurement/zzjl;-><init>()V
+
+    invoke-static {v1}, Lcom/google/android/gms/internal/measurement/zzji;->zza(Lcom/google/android/gms/internal/measurement/zzjh;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    sget-object v1, Lcom/google/android/gms/internal/measurement/zzji;->zza:Lcom/google/android/gms/internal/measurement/zzjh;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method

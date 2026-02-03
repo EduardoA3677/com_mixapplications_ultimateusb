@@ -1,0 +1,23 @@
+.class public Lcom/my/target/r3;
+.super Lcom/my/target/b;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/my/target/b;-><init>()V
+
+    return-void
+.end method
+
+.method public static L()Lcom/my/target/r3;
+    .locals 1
+
+    new-instance v0, Lcom/my/target/r3;
+
+    invoke-direct {v0}, Lcom/my/target/r3;-><init>()V
+
+    return-object v0
+.end method

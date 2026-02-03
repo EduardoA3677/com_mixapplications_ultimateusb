@@ -1,0 +1,23 @@
+.class public final Lcom/appodeal/ads/f4;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# instance fields
+.field public a:I
+
+.field public b:Lcom/appodeal/ads/y0;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v0, Lcom/appodeal/ads/y0;->c:Lcom/appodeal/ads/y0;
+
+    iput-object v0, p0, Lcom/appodeal/ads/f4;->b:Lcom/appodeal/ads/y0;
+
+    return-void
+.end method

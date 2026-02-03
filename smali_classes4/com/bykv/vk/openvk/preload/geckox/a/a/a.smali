@@ -1,0 +1,65 @@
+.class public final Lcom/bykv/vk/openvk/preload/geckox/a/a/a;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/bykv/vk/openvk/preload/geckox/a/a/a$a;
+    }
+.end annotation
+
+
+# instance fields
+.field final a:I
+
+.field final b:Lcom/bykv/vk/openvk/preload/geckox/a/a/c;
+
+.field private final c:Lcom/bykv/vk/openvk/preload/geckox/a/a/b;
+
+
+# direct methods
+.method private constructor <init>(Lcom/bykv/vk/openvk/preload/geckox/a/a/a$a;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Lcom/bykv/vk/openvk/preload/geckox/a/a/a$a;->a(Lcom/bykv/vk/openvk/preload/geckox/a/a/a$a;)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/bykv/vk/openvk/preload/geckox/a/a/a;->a:I
+
+    invoke-static {p1}, Lcom/bykv/vk/openvk/preload/geckox/a/a/a$a;->b(Lcom/bykv/vk/openvk/preload/geckox/a/a/a$a;)Lcom/bykv/vk/openvk/preload/geckox/a/a/b;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bykv/vk/openvk/preload/geckox/a/a/a;->c:Lcom/bykv/vk/openvk/preload/geckox/a/a/b;
+
+    invoke-static {p1}, Lcom/bykv/vk/openvk/preload/geckox/a/a/a$a;->c(Lcom/bykv/vk/openvk/preload/geckox/a/a/a$a;)Lcom/bykv/vk/openvk/preload/geckox/a/a/c;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/bykv/vk/openvk/preload/geckox/a/a/a;->b:Lcom/bykv/vk/openvk/preload/geckox/a/a/c;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lcom/bykv/vk/openvk/preload/geckox/a/a/a$a;B)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/bykv/vk/openvk/preload/geckox/a/a/a;-><init>(Lcom/bykv/vk/openvk/preload/geckox/a/a/a$a;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lcom/bykv/vk/openvk/preload/geckox/a/a/b;
+    .locals 1
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/preload/geckox/a/a/a;->c:Lcom/bykv/vk/openvk/preload/geckox/a/a/b;
+
+    return-object v0
+.end method

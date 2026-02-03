@@ -1,0 +1,46 @@
+.class public interface abstract Landroidx/media3/exoplayer/source/chunk/MediaChunkIterator;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# annotations
+.annotation build Landroidx/media3/common/util/UnstableApi;
+.end annotation
+
+
+# static fields
+.field public static final EMPTY:Landroidx/media3/exoplayer/source/chunk/MediaChunkIterator;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Landroidx/media3/exoplayer/source/chunk/MediaChunkIterator$1;
+
+    invoke-direct {v0}, Landroidx/media3/exoplayer/source/chunk/MediaChunkIterator$1;-><init>()V
+
+    sput-object v0, Landroidx/media3/exoplayer/source/chunk/MediaChunkIterator;->EMPTY:Landroidx/media3/exoplayer/source/chunk/MediaChunkIterator;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract getChunkEndTimeUs()J
+.end method
+
+.method public abstract getChunkStartTimeUs()J
+.end method
+
+.method public abstract getDataSpec()Landroidx/media3/datasource/DataSpec;
+.end method
+
+.method public abstract isEnded()Z
+.end method
+
+.method public abstract next()Z
+.end method
+
+.method public abstract reset()V
+.end method

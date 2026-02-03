@@ -1,0 +1,67 @@
+.class abstract Lcom/google/android/play/core/integrity/bm;
+.super Lcom/google/android/play/integrity/internal/t;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# instance fields
+.field final synthetic f:Lcom/google/android/play/core/integrity/bn;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/play/core/integrity/bn;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
+    .locals 0
+    .param p1    # Lcom/google/android/play/core/integrity/bn;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    iput-object p1, p0, Lcom/google/android/play/core/integrity/bm;->f:Lcom/google/android/play/core/integrity/bn;
+
+    invoke-direct {p0, p2}, Lcom/google/android/play/integrity/internal/t;-><init>(Lcom/google/android/gms/tasks/TaskCompletionSource;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Exception;)V
+    .locals 2
+
+    instance-of v0, p1, Lcom/google/android/play/integrity/internal/af;
+
+    if-nez v0, :cond_0
+
+    invoke-super {p0, p1}, Lcom/google/android/play/integrity/internal/t;->a(Ljava/lang/Exception;)V
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/play/core/integrity/bm;->f:Lcom/google/android/play/core/integrity/bn;
+
+    invoke-static {v0}, Lcom/google/android/play/core/integrity/bn;->l(Lcom/google/android/play/core/integrity/bn;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Lcom/google/android/play/core/integrity/StandardIntegrityException;
+
+    const/4 v1, -0x2
+
+    invoke-direct {v0, v1, p1}, Lcom/google/android/play/core/integrity/StandardIntegrityException;-><init>(ILjava/lang/Throwable;)V
+
+    invoke-super {p0, v0}, Lcom/google/android/play/integrity/internal/t;->a(Ljava/lang/Exception;)V
+
+    return-void
+
+    :cond_1
+    new-instance v0, Lcom/google/android/play/core/integrity/StandardIntegrityException;
+
+    const/16 v1, -0x9
+
+    invoke-direct {v0, v1, p1}, Lcom/google/android/play/core/integrity/StandardIntegrityException;-><init>(ILjava/lang/Throwable;)V
+
+    invoke-super {p0, v0}, Lcom/google/android/play/integrity/internal/t;->a(Ljava/lang/Exception;)V
+
+    return-void
+.end method

@@ -1,0 +1,115 @@
+.class public final Landroidx/lifecycle/ViewTreeViewModelStoreOwner;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0014\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u001a\u001b\u0010\u0000\u001a\u00020\u0001*\u00020\u00022\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u0004H\u0007\u00a2\u0006\u0002\u0008\u0005\u001a\u0013\u0010\u0006\u001a\u0004\u0018\u00010\u0004*\u00020\u0002H\u0007\u00a2\u0006\u0002\u0008\u0007\u00a8\u0006\u0008"
+    }
+    d2 = {
+        "setViewTreeViewModelStoreOwner",
+        "",
+        "Landroid/view/View;",
+        "viewModelStoreOwner",
+        "Landroidx/lifecycle/ViewModelStoreOwner;",
+        "set",
+        "findViewTreeViewModelStoreOwner",
+        "get",
+        "lifecycle-viewmodel_release"
+    }
+    k = 0x2
+    mv = {
+        0x2,
+        0x0,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# direct methods
+.method public static final get(Landroid/view/View;)Landroidx/lifecycle/ViewModelStoreOwner;
+    .locals 3
+    .param p0    # Landroid/view/View;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/p;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :goto_0
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_3
+
+    sget v1, Landroidx/lifecycle/viewmodel/R$id;->view_tree_view_model_store_owner:I
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v2, v1, Landroidx/lifecycle/ViewModelStoreOwner;
+
+    if-eqz v2, :cond_0
+
+    check-cast v1, Landroidx/lifecycle/ViewModelStoreOwner;
+
+    goto :goto_1
+
+    :cond_0
+    move-object v1, v0
+
+    :goto_1
+    if-eqz v1, :cond_1
+
+    return-object v1
+
+    :cond_1
+    invoke-static {p0}, Landroidx/core/viewtree/ViewTree;->getParentOrViewTreeDisjointParent(Landroid/view/View;)Landroid/view/ViewParent;
+
+    move-result-object p0
+
+    instance-of v1, p0, Landroid/view/View;
+
+    if-eqz v1, :cond_2
+
+    check-cast p0, Landroid/view/View;
+
+    goto :goto_0
+
+    :cond_2
+    move-object p0, v0
+
+    goto :goto_0
+
+    :cond_3
+    return-object v0
+.end method
+
+.method public static final set(Landroid/view/View;Landroidx/lifecycle/ViewModelStoreOwner;)V
+    .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Landroidx/lifecycle/ViewModelStoreOwner;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/p;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget v0, Landroidx/lifecycle/viewmodel/R$id;->view_tree_view_model_store_owner:I
+
+    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    return-void
+.end method

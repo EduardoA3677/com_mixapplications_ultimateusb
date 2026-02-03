@@ -1,0 +1,43 @@
+.class Lcom/bytedance/sdk/openadsdk/utils/qdl$qdl;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/bytedance/sdk/openadsdk/utils/qdl;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "qdl"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 2
+
+    new-instance v0, Lcom/bytedance/sdk/openadsdk/utils/qdl$qdl$1;
+
+    const-string v1, "reportPvFromBackGround"
+
+    invoke-direct {v0, p0, v1}, Lcom/bytedance/sdk/openadsdk/utils/qdl$qdl$1;-><init>(Lcom/bytedance/sdk/openadsdk/utils/qdl$qdl;Ljava/lang/String;)V
+
+    invoke-static {v0}, Lcom/bytedance/sdk/openadsdk/utils/fco;->lnr(Lcom/bytedance/sdk/component/jpc/jpc;)V
+
+    return-void
+.end method

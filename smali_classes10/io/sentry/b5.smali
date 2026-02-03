@@ -1,0 +1,130 @@
+.class public final Lio/sentry/b5;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Lio/sentry/i2;
+
+
+# instance fields
+.field public final a:Lio/sentry/protocol/v;
+
+.field public final b:Lio/sentry/protocol/t;
+
+.field public final c:Lio/sentry/i7;
+
+.field public d:Ljava/util/Date;
+
+.field public e:Ljava/util/HashMap;
+
+
+# direct methods
+.method public constructor <init>(Lio/sentry/protocol/v;Lio/sentry/protocol/t;Lio/sentry/i7;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lio/sentry/b5;->a:Lio/sentry/protocol/v;
+
+    iput-object p2, p0, Lio/sentry/b5;->b:Lio/sentry/protocol/t;
+
+    iput-object p3, p0, Lio/sentry/b5;->c:Lio/sentry/i7;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final serialize(Lio/sentry/k3;Lio/sentry/ILogger;)V
+    .locals 3
+
+    check-cast p1, Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;
+
+    invoke-virtual {p1}, Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;->a()Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;
+
+    iget-object v0, p0, Lio/sentry/b5;->a:Lio/sentry/protocol/v;
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "event_id"
+
+    invoke-virtual {p1, v1}, Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;->j(Ljava/lang/String;)Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;
+
+    invoke-virtual {p1, p2, v0}, Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;->p(Lio/sentry/ILogger;Ljava/lang/Object;)Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;
+
+    :cond_0
+    iget-object v0, p0, Lio/sentry/b5;->b:Lio/sentry/protocol/t;
+
+    if-eqz v0, :cond_1
+
+    const-string v1, "sdk"
+
+    invoke-virtual {p1, v1}, Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;->j(Ljava/lang/String;)Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;
+
+    invoke-virtual {p1, p2, v0}, Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;->p(Lio/sentry/ILogger;Ljava/lang/Object;)Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;
+
+    :cond_1
+    iget-object v0, p0, Lio/sentry/b5;->c:Lio/sentry/i7;
+
+    if-eqz v0, :cond_2
+
+    const-string v1, "trace"
+
+    invoke-virtual {p1, v1}, Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;->j(Ljava/lang/String;)Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;
+
+    invoke-virtual {p1, p2, v0}, Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;->p(Lio/sentry/ILogger;Ljava/lang/Object;)Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;
+
+    :cond_2
+    iget-object v0, p0, Lio/sentry/b5;->d:Ljava/util/Date;
+
+    if-eqz v0, :cond_3
+
+    const-string v0, "sent_at"
+
+    invoke-virtual {p1, v0}, Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;->j(Ljava/lang/String;)Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;
+
+    iget-object v0, p0, Lio/sentry/b5;->d:Ljava/util/Date;
+
+    invoke-static {v0}, Lio/sentry/p;->e(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, p2, v0}, Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;->p(Lio/sentry/ILogger;Ljava/lang/Object;)Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;
+
+    :cond_3
+    iget-object v0, p0, Lio/sentry/b5;->e:Ljava/util/HashMap;
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    iget-object v2, p0, Lio/sentry/b5;->e:Ljava/util/HashMap;
+
+    invoke-static {v2, v1, p1, v1, p2}, Ld2/b;->w(Ljava/util/HashMap;Ljava/lang/String;Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;Ljava/lang/String;Lio/sentry/ILogger;)V
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;->c()Lcom/moloco/sdk/xenoss/sdkdevkit/android/adrenderer/internal/vast/model/j;
+
+    return-void
+.end method

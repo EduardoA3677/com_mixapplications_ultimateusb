@@ -1,0 +1,59 @@
+.class public final Lk3/f0;
+.super Lnd/c;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# instance fields
+.field public r:Ljava/util/List;
+
+.field public s:Ljava/lang/Object;
+
+.field public t:Ljava/lang/Object;
+
+.field public u:Ljava/lang/String;
+
+.field public v:Ljava/lang/String;
+
+.field public w:I
+
+.field public synthetic x:Ljava/lang/Object;
+
+.field public final synthetic y:Lea/o;
+
+.field public z:I
+
+
+# direct methods
+.method public constructor <init>(Lea/o;Lnd/c;)V
+    .locals 0
+
+    iput-object p1, p0, Lk3/f0;->y:Lea/o;
+
+    invoke-direct {p0, p2}, Lnd/c;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lk3/f0;->x:Ljava/lang/Object;
+
+    iget p1, p0, Lk3/f0;->z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lk3/f0;->z:I
+
+    iget-object p1, p0, Lk3/f0;->y:Lea/o;
+
+    invoke-virtual {p1, p0}, Lea/o;->g(Lnd/c;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

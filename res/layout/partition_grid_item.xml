@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="8.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:backgroundTint="@color/designMainColor" app:cardCornerRadius="5.0dp" app:cardElevation="5.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/image" android:layout_width="92.0dp" android:layout_height="92.0dp" android:src="@drawable/ic_partition" />
+    <TextView android:textStyle="bold" android:textColor="@color/miniTitle" android:gravity="center" android:layout_gravity="center" android:id="@id/text_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="@string/app_name" android:textAlignment="center" />
+    <TextView android:textStyle="bold" android:textColor="@color/miniTitle" android:gravity="center" android:layout_gravity="center" android:id="@id/text_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="@string/app_name" android:textAlignment="center" />
+    <TextView android:textStyle="bold" android:textColor="@color/miniTitle" android:gravity="center" android:layout_gravity="center" android:id="@id/text_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="@string/app_name" android:textAlignment="center" />
+</LinearLayout>

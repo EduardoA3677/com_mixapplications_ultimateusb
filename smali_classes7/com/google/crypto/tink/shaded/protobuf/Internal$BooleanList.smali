@@ -1,0 +1,50 @@
+.class public interface abstract Lcom/google/crypto/tink/shaded/protobuf/Internal$BooleanList;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Lcom/google/crypto/tink/shaded/protobuf/Internal$ProtobufList;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/crypto/tink/shaded/protobuf/Internal;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "BooleanList"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/google/crypto/tink/shaded/protobuf/Internal$ProtobufList<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract addBoolean(Z)V
+.end method
+
+.method public abstract getBoolean(I)Z
+.end method
+
+.method public abstract mutableCopyWithCapacity(I)Lcom/google/crypto/tink/shaded/protobuf/Internal$BooleanList;
+.end method
+
+.method public bridge synthetic mutableCopyWithCapacity(I)Lcom/google/crypto/tink/shaded/protobuf/Internal$ProtobufList;
+    .locals 0
+
+    invoke-interface {p0, p1}, Lcom/google/crypto/tink/shaded/protobuf/Internal$BooleanList;->mutableCopyWithCapacity(I)Lcom/google/crypto/tink/shaded/protobuf/Internal$BooleanList;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public abstract setBoolean(IZ)Z
+.end method

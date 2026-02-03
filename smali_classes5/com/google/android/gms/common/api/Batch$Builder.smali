@@ -1,0 +1,98 @@
+.class public final Lcom/google/android/gms/common/api/Batch$Builder;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/gms/common/api/Batch;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Builder"
+.end annotation
+
+
+# instance fields
+.field private final zaa:Ljava/util/List;
+
+.field private final zab:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/common/api/GoogleApiClient;)V
+    .locals 1
+    .param p1    # Lcom/google/android/gms/common/api/GoogleApiClient;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/common/api/Batch$Builder;->zaa:Ljava/util/List;
+
+    iput-object p1, p0, Lcom/google/android/gms/common/api/Batch$Builder;->zab:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public add(Lcom/google/android/gms/common/api/PendingResult;)Lcom/google/android/gms/common/api/BatchResultToken;
+    .locals 3
+    .param p1    # Lcom/google/android/gms/common/api/PendingResult;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R::",
+            "Lcom/google/android/gms/common/api/Result;",
+            ">(",
+            "Lcom/google/android/gms/common/api/PendingResult<",
+            "TR;>;)",
+            "Lcom/google/android/gms/common/api/BatchResultToken<",
+            "TR;>;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/google/android/gms/common/api/BatchResultToken;
+
+    iget-object v1, p0, Lcom/google/android/gms/common/api/Batch$Builder;->zaa:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    invoke-direct {v0, v2}, Lcom/google/android/gms/common/api/BatchResultToken;-><init>(I)V
+
+    invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    return-object v0
+.end method
+
+.method public build()Lcom/google/android/gms/common/api/Batch;
+    .locals 4
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    new-instance v0, Lcom/google/android/gms/common/api/Batch;
+
+    iget-object v1, p0, Lcom/google/android/gms/common/api/Batch$Builder;->zaa:Ljava/util/List;
+
+    iget-object v2, p0, Lcom/google/android/gms/common/api/Batch$Builder;->zab:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/common/api/Batch;-><init>(Ljava/util/List;Lcom/google/android/gms/common/api/GoogleApiClient;[B)V
+
+    return-object v0
+.end method

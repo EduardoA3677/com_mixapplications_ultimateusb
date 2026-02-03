@@ -1,0 +1,67 @@
+.class final Lio/bidmachine/analytics/internal/a/d$a;
+.super Lkotlin/jvm/internal/r;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function0;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lio/bidmachine/analytics/internal/a/d;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+
+# static fields
+.field public static final a:Lio/bidmachine/analytics/internal/a/d$a;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lio/bidmachine/analytics/internal/a/d$a;
+
+    invoke-direct {v0}, Lio/bidmachine/analytics/internal/a/d$a;-><init>()V
+
+    sput-object v0, Lio/bidmachine/analytics/internal/a/d$a;->a:Lio/bidmachine/analytics/internal/a/d$a;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lkotlin/jvm/internal/r;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lkotlinx/coroutines/CoroutineDispatcher;
+    .locals 1
+
+    sget-object v0, Lge/l0;->a:Lne/e;
+
+    sget-object v0, Lle/n;->a:Lhe/c;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lio/bidmachine/analytics/internal/a/d$a;->a()Lkotlinx/coroutines/CoroutineDispatcher;
+
+    move-result-object v0
+
+    return-object v0
+.end method

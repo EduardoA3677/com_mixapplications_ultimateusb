@@ -1,0 +1,15 @@
+.class public final Lcom/google/android/gms/internal/auth/zzde;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/internal/auth/zzcu;[B)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget p1, Lcom/google/android/gms/internal/auth/zzdc;->zzd:I
+
+    return-void
+.end method

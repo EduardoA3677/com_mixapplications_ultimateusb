@@ -1,0 +1,92 @@
+.class public final Lbf/o;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Ljava/util/Comparator;
+
+
+# virtual methods
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
+
+    check-cast p1, Ljava/lang/String;
+
+    check-cast p2, Ljava/lang/String;
+
+    const-string v0, "a"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/p;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "b"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/p;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    invoke-virtual {p2, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result v3
+
+    if-eq v2, v3, :cond_0
+
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/p;->h(II)I
+
+    move-result p1
+
+    if-gez p1, :cond_2
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result p2
+
+    if-eq p1, p2, :cond_3
+
+    if-ge p1, p2, :cond_2
+
+    :goto_1
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_2
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    return p1
+.end method

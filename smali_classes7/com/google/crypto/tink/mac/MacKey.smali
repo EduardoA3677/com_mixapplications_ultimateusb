@@ -1,0 +1,31 @@
+.class public abstract Lcom/google/crypto/tink/mac/MacKey;
+.super Lcom/google/crypto/tink/Key;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/crypto/tink/Key;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract getOutputPrefix()Lcom/google/crypto/tink/util/Bytes;
+.end method
+
+.method public bridge synthetic getParameters()Lcom/google/crypto/tink/Parameters;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/google/crypto/tink/mac/MacKey;->getParameters()Lcom/google/crypto/tink/mac/MacParameters;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public abstract getParameters()Lcom/google/crypto/tink/mac/MacParameters;
+.end method

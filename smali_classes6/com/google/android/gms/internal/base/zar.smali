@@ -1,0 +1,51 @@
+.class public Lcom/google/android/gms/internal/base/zar;
+.super Landroid/os/Handler;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# instance fields
+.field private final zaa:Landroid/os/Looper;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/base/zar;->zaa:Landroid/os/Looper;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Looper;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/base/zar;->zaa:Landroid/os/Looper;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/base/zar;->zaa:Landroid/os/Looper;
+
+    return-void
+.end method

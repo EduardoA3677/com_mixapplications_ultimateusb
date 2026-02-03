@@ -1,0 +1,50 @@
+.class public interface abstract Lcom/ironsource/T0;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+# interfaces
+.implements Lcom/ironsource/Q0;
+
+
+# virtual methods
+.method public abstract b(Lcom/ironsource/p3;)V
+    .param p1    # Lcom/ironsource/p3;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/ironsource/p3<",
+            "*>;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract c(Lcom/ironsource/p3;)V
+    .param p1    # Lcom/ironsource/p3;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/ironsource/p3<",
+            "*>;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract f(Lcom/ironsource/p3;)V
+    .param p1    # Lcom/ironsource/p3;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/ironsource/p3<",
+            "*>;)V"
+        }
+    .end annotation
+.end method

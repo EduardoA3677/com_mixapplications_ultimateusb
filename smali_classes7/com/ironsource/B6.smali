@@ -1,0 +1,77 @@
+.class public interface abstract Lcom/ironsource/B6;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# virtual methods
+.method public abstract a(Landroid/app/Activity;)V
+    .param p1    # Landroid/app/Activity;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract a(Lcom/ironsource/q6;)V
+    .param p1    # Lcom/ironsource/q6;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract a(Lcom/ironsource/q6;Lcom/ironsource/mediationsdk/logger/IronSourceError;)V
+    .param p1    # Lcom/ironsource/q6;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/ironsource/mediationsdk/logger/IronSourceError;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract a(Lcom/ironsource/q6;Lcom/unity3d/mediation/LevelPlayAdInfo;)V
+    .param p1    # Lcom/ironsource/q6;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/unity3d/mediation/LevelPlayAdInfo;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract b(Lcom/ironsource/q6;Lcom/ironsource/mediationsdk/logger/IronSourceError;)V
+    .param p1    # Lcom/ironsource/q6;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/ironsource/mediationsdk/logger/IronSourceError;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract b(Lcom/ironsource/q6;Lcom/unity3d/mediation/LevelPlayAdInfo;)V
+    .param p1    # Lcom/ironsource/q6;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/unity3d/mediation/LevelPlayAdInfo;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract c(Lcom/ironsource/q6;Lcom/unity3d/mediation/LevelPlayAdInfo;)V
+    .param p1    # Lcom/ironsource/q6;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/unity3d/mediation/LevelPlayAdInfo;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract loadAd()V
+.end method

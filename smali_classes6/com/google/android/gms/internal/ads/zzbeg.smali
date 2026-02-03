@@ -1,0 +1,106 @@
+.class public abstract Lcom/google/android/gms/internal/ads/zzbeg;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# annotations
+.annotation runtime Ljavax/annotation/ParametersAreNonnullByDefault;
+.end annotation
+
+
+# static fields
+.field private static zzb:Ljava/security/MessageDigest;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+
+# instance fields
+.field protected final zza:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/ads/zzbeg;->zza:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract zza(Ljava/lang/String;)[B
+.end method
+
+.method public final zzb()Ljava/security/MessageDigest;
+    .locals 3
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzbeg;->zza:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lcom/google/android/gms/internal/ads/zzbeg;->zzb:Ljava/security/MessageDigest;
+
+    if-eqz v1, :cond_0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    const/4 v2, 0x2
+
+    if-ge v1, v2, :cond_1
+
+    :try_start_1
+    const-string v2, "MD5"
+
+    invoke-static {v2}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/google/android/gms/internal/ads/zzbeg;->zzb:Ljava/security/MessageDigest;
+    :try_end_1
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :catch_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_2
+    sget-object v1, Lcom/google/android/gms/internal/ads/zzbeg;->zzb:Ljava/security/MessageDigest;
+
+    monitor-exit v0
+
+    return-object v1
+
+    :goto_1
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
+.end method

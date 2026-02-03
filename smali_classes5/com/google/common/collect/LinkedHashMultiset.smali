@@ -1,0 +1,159 @@
+.class public final Lcom/google/common/collect/LinkedHashMultiset;
+.super Lcom/google/common/collect/AbstractMapBasedMultiset;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# annotations
+.annotation build Lcom/google/common/annotations/GwtCompatible;
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<E:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lcom/google/common/collect/AbstractMapBasedMultiset<",
+        "TE;>;"
+    }
+.end annotation
+
+
+# direct methods
+.method public static create()Lcom/google/common/collect/LinkedHashMultiset;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<E:",
+            "Ljava/lang/Object;",
+            ">()",
+            "Lcom/google/common/collect/LinkedHashMultiset<",
+            "TE;>;"
+        }
+    .end annotation
+
+    const/4 v0, 0x3
+
+    invoke-static {v0}, Lcom/google/common/collect/LinkedHashMultiset;->create(I)Lcom/google/common/collect/LinkedHashMultiset;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static create(I)Lcom/google/common/collect/LinkedHashMultiset;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<E:",
+            "Ljava/lang/Object;",
+            ">(I)",
+            "Lcom/google/common/collect/LinkedHashMultiset<",
+            "TE;>;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/google/common/collect/LinkedHashMultiset;
+
+    invoke-direct {v0, p0}, Lcom/google/common/collect/AbstractMapBasedMultiset;-><init>(I)V
+
+    return-object v0
+.end method
+
+.method public static create(Ljava/lang/Iterable;)Lcom/google/common/collect/LinkedHashMultiset;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<E:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Iterable<",
+            "+TE;>;)",
+            "Lcom/google/common/collect/LinkedHashMultiset<",
+            "TE;>;"
+        }
+    .end annotation
+
+    instance-of v0, p0, Lcom/google/common/collect/Multiset;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Lcom/google/common/collect/Multiset;
+
+    invoke-interface {v0}, Lcom/google/common/collect/Multiset;->elementSet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->size()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0xb
+
+    :goto_0
+    invoke-static {v0}, Lcom/google/common/collect/LinkedHashMultiset;->create(I)Lcom/google/common/collect/LinkedHashMultiset;
+
+    move-result-object v0
+
+    invoke-static {v0, p0}, Lcom/google/common/collect/Iterables;->addAll(Ljava/util/Collection;Ljava/lang/Iterable;)Z
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public bridge synthetic contains(Ljava/lang/Object;)Z
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/google/common/collect/AbstractMultiset;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic elementSet()Ljava/util/Set;
+    .locals 1
+
+    invoke-super {p0}, Lcom/google/common/collect/AbstractMultiset;->elementSet()Ljava/util/Set;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic entrySet()Ljava/util/Set;
+    .locals 1
+
+    invoke-super {p0}, Lcom/google/common/collect/AbstractMultiset;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic isEmpty()Z
+    .locals 1
+
+    invoke-super {p0}, Lcom/google/common/collect/AbstractMultiset;->isEmpty()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final k(I)Lcom/google/common/collect/ObjectCountHashMap;
+    .locals 2
+
+    new-instance v0, Lcom/google/common/collect/ObjectCountLinkedHashMap;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lcom/google/common/collect/ObjectCountHashMap;-><init>(II)V
+
+    return-object v0
+.end method

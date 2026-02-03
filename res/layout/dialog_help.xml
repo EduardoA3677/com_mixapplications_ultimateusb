@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/colorPrimaryDark" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mixapplications.commons.MixButton android:textStyle="bold" android:textColor="@drawable/button_text" android:gravity="center" android:id="@id/btnOtgTutorial" android:background="@drawable/btn_drawable" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:minWidth="50.0dp" android:minHeight="48.0dp" android:text="@string/how_to_enable_otg" android:paddingStart="5.0dp" android:paddingEnd="5.0dp" android:backgroundTint="@color/out_date_dialog_shadow_color" />
+    <com.mixapplications.commons.MixButton android:textStyle="bold" android:textColor="@drawable/button_text" android:gravity="center" android:id="@id/btnContactSupport" android:background="@drawable/btn_drawable" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:minWidth="50.0dp" android:minHeight="48.0dp" android:text="@string/contact_support" android:paddingStart="5.0dp" android:paddingEnd="5.0dp" android:backgroundTint="@color/out_date_dialog_shadow_color" />
+</LinearLayout>

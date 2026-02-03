@@ -1,0 +1,37 @@
+.class public final Lcom/google/android/gms/internal/ads/zzgqh;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# direct methods
+.method public static zza([B)Ljava/lang/String;
+    .locals 1
+
+    :try_start_0
+    const-string v0, "SHA-256"
+
+    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->update([B)V
+
+    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
+
+    move-result-object p0
+
+    const/16 v0, 0xb
+
+    invoke-static {p0, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :catch_0
+    const-string p0, ""
+
+    return-object p0
+.end method

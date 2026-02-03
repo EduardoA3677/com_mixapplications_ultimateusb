@@ -1,0 +1,25 @@
+.class final Lcom/google/android/gms/internal/measurement/zzgy;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# static fields
+.field static final zza:Lcom/google/android/gms/internal/measurement/zznf;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, ""
+
+    sget-object v1, Lcom/google/android/gms/internal/measurement/zzot;->zzi:Lcom/google/android/gms/internal/measurement/zzot;
+
+    invoke-static {v1, v0, v1, v0}, Lcom/google/android/gms/internal/measurement/zznf;->zza(Lcom/google/android/gms/internal/measurement/zzot;Ljava/lang/Object;Lcom/google/android/gms/internal/measurement/zzot;Ljava/lang/Object;)Lcom/google/android/gms/internal/measurement/zznf;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/gms/internal/measurement/zzgy;->zza:Lcom/google/android/gms/internal/measurement/zznf;
+
+    return-void
+.end method

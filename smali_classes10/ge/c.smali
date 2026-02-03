@@ -1,0 +1,143 @@
+.class public final Lge/c;
+.super Lge/e1;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# static fields
+.field public static final synthetic h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+
+# instance fields
+.field private volatile synthetic _disposer$volatile:Ljava/lang/Object;
+
+.field public final e:Lge/l;
+
+.field public f:Lge/n0;
+
+.field public final synthetic g:Lge/e;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    const-class v0, Ljava/lang/Object;
+
+    const-string v1, "_disposer$volatile"
+
+    const-class v2, Lge/c;
+
+    invoke-static {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lge/c;->h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lge/e;Lge/l;)V
+    .locals 0
+
+    iput-object p1, p0, Lge/c;->g:Lge/e;
+
+    invoke-direct {p0}, Lle/j;-><init>()V
+
+    iput-object p2, p0, Lge/c;->e:Lge/l;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final i()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final j(Ljava/lang/Throwable;)V
+    .locals 5
+
+    iget-object v0, p0, Lge/c;->e:Lge/l;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lge/u;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lge/u;-><init>(Ljava/lang/Throwable;Z)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Lge/l;->F(Ljava/lang/Object;Lkotlin/jvm/functions/Function3;)Lcom/appodeal/ads/adapters/iab/utils/c;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v0, p1}, Lge/l;->h(Ljava/lang/Object;)V
+
+    sget-object p1, Lge/c;->h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lge/d;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Lge/d;->b()V
+
+    return-void
+
+    :cond_0
+    sget-object p1, Lge/e;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    iget-object v1, p0, Lge/c;->g:Lge/e;
+
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->decrementAndGet(Ljava/lang/Object;)I
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    iget-object p1, v1, Lge/e;->a:[Lkotlinx/coroutines/Deferred;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    array-length v2, p1
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    array-length v2, p1
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_1
+
+    aget-object v4, p1, v3
+
+    invoke-interface {v4}, Lkotlinx/coroutines/Deferred;->m()Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0, v1}, Lge/l;->resumeWith(Ljava/lang/Object;)V
+
+    :cond_2
+    return-void
+.end method

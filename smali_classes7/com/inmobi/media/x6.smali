@@ -1,0 +1,43 @@
+.class public final Lcom/inmobi/media/x6;
+.super Ljava/lang/Object;
+.source "r8-map-id-1e80ea06975d5993eee5a4d2c3b8e1763279e834560ee43e3bc1939aa136e062"
+
+
+# instance fields
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lkotlinx/coroutines/CoroutineScope;
+
+.field public final c:Lkotlinx/coroutines/flow/MutableSharedFlow;
+
+.field public final d:Lcom/inmobi/media/n9;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/MutableSharedFlow;Lcom/inmobi/media/n9;)V
+    .locals 1
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/p;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "coroutineScope"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/p;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "mediaEventFlow"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/p;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/inmobi/media/x6;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lcom/inmobi/media/x6;->b:Lkotlinx/coroutines/CoroutineScope;
+
+    iput-object p3, p0, Lcom/inmobi/media/x6;->c:Lkotlinx/coroutines/flow/MutableSharedFlow;
+
+    iput-object p4, p0, Lcom/inmobi/media/x6;->d:Lcom/inmobi/media/n9;
+
+    return-void
+.end method

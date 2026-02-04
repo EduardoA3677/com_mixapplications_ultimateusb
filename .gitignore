@@ -1,2 +1,7 @@
 *.backup
 *.backup
+
+# Build artifacts
+build/
+test_build.apk
+*.apk

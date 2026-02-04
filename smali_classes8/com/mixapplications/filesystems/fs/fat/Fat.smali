@@ -1320,6 +1320,8 @@
     :cond_1
     sput-boolean v0, Lcom/mixapplications/filesystems/fs/fat/Fat;->e:Z
 
+    invoke-static {}, Lcom/mixapplications/security/Loader;->c()V
+
     invoke-static {}, Lcom/mixapplications/filesystems/fs/fat/Fat;->getBlockSize()I
 
     move-result p0

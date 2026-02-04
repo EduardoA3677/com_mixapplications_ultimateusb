@@ -1113,46 +1113,6 @@
     return-void
 .end method
 
-    sget-object v1, Lcom/mixapplications/commons/MyActivity;->Companion:Lo3/k4;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Lcom/mixapplications/commons/MyActivity;->access$getInstance$cp()Lcom/mixapplications/commons/MyActivity;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/16 v3, 0xc
-
-    sget-object v4, Lp3/j;->a:Lp3/j;
-
-    invoke-static {v4, v1, v0, v2, v3}, Lp3/j;->i(Lp3/j;Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;I)V
-
-    :cond_0
-    invoke-static {}, Lge/c0;->d()Lsc/a;
-
-    move-result-object v0
-
-    new-instance v1, Lp3/a;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, p0, v2, v3}, Lp3/a;-><init>(Lp4/f3;Lkotlin/coroutines/Continuation;I)V
-
-    const/4 p0, 0x3
-
-    invoke-static {v0, v2, v2, v1, p0}, Lge/c0;->G(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lge/a0;Lkotlin/jvm/functions/Function2;I)Lge/r1;
-
-    return-void
-.end method
-
 .method public static e()Lcom/android/billingclient/api/BillingClient;
     .locals 1
 

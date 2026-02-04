@@ -1290,7 +1290,7 @@
 .end method
 
 .method public static n(Lj3/e;)Z
-    .locals 2
+    .locals 4
 
     const-string v0, "device"
 
@@ -1328,6 +1328,39 @@
 
     move-result-wide v0
 
+    # Check if blockSize is -1 (invalid)
+    const/4 v2, -0x1
+
+    if-ne p0, v2, :cond_2
+
+    # BlockSize is invalid, return false without calling native
+    invoke-static {}, Lcom/mixapplications/filesystems/fs/fat/Fat;->m()V
+
+    const/4 p0, 0x0
+
+    sput-boolean p0, Lcom/mixapplications/filesystems/fs/fat/Fat;->d:Z
+
+    return p0
+
+    :cond_2
+    # Check if sectorCount is -1 (invalid)
+    const-wide/16 v2, -0x1
+
+    cmp-long v2, v0, v2
+
+    if-nez v2, :cond_3
+
+    # SectorCount is invalid, return false without calling native
+    invoke-static {}, Lcom/mixapplications/filesystems/fs/fat/Fat;->m()V
+
+    const/4 p0, 0x0
+
+    sput-boolean p0, Lcom/mixapplications/filesystems/fs/fat/Fat;->d:Z
+
+    return p0
+
+    :cond_3
+    # Both values are valid, proceed with native call
     invoke-static {p0, v0, v1}, Lcom/mixapplications/filesystems/fs/fat/Fat;->fatNativeInitJni(IJ)Z
 
     move-result p0

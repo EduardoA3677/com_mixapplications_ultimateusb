@@ -1516,10 +1516,20 @@
     return-object v0
 
     :cond_15
+    # Fix: Check if v2 (device) is null before calling native method
+    if-eqz v2, :cond_null_device_1
+
     invoke-static {v2}, Lcom/mixapplications/filesystems/fs/fat/Fat;->n(Lj3/e;)Z
 
     move-result v3
 
+    goto :goto_after_null_1
+
+    # Handle null device case - set result to false
+    :cond_null_device_1
+    const/4 v3, 0x0
+
+    :goto_after_null_1
     if-nez v3, :cond_16
 
     new-instance v0, Lv3/r;
@@ -2605,8 +2615,13 @@
     return-object v0
 
     :cond_31
+    # Fix: Check if v3 (device) is null before calling native method
+    if-eqz v3, :goto_skip_fat_n
+
+    # Note: Return value intentionally not captured - original code behavior preserved
     invoke-static {v3}, Lcom/mixapplications/filesystems/fs/fat/Fat;->n(Lj3/e;)Z
 
+    :goto_skip_fat_n
     invoke-static {}, Lcom/mixapplications/filesystems/fs/fat/Fat;->r()Z
 
     invoke-static/range {v20 .. v20}, Lde/k;->S0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;

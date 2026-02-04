@@ -1035,10 +1035,20 @@
 
     iget-object v6, v2, Lx3/i;->h:Lj3/e;
 
+    # Fix: Check if v6 (device) is null before calling native method
+    if-eqz v6, :cond_null_device
+
     invoke-static {v6}, Lcom/mixapplications/filesystems/fs/fat/Fat;->n(Lj3/e;)Z
 
     move-result v6
 
+    goto :goto_after_null_check
+
+    # Handle null device case - set result to false
+    :cond_null_device
+    const/4 v6, 0x0
+
+    :goto_after_null_check
     iput-boolean v6, v2, Lx3/i;->j:Z
 
     iget-object v2, v1, Lcom/moloco/sdk/xenoss/sdkdevkit/android/persistenttransport/i;->u:Ljava/lang/Object;

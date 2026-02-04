@@ -182,48 +182,11 @@
 .end method
 
 .method public static a(ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 5
+    .locals 1
 
-    invoke-static {}, Lo3/e2;->d()Z
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    if-gtz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Lge/l0;->a:Lne/e;
-
-    sget-object v0, Lle/n;->a:Lhe/c;
-
-    new-instance v1, Lo3/c1;
-
-    const/4 v2, 0x7
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-direct {v1, p0, v4, v2, v3}, Lo3/c1;-><init>(ILkotlin/coroutines/Continuation;IZ)V
-
-    invoke-static {v0, v1, p1}, Lge/c0;->T(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lmd/a;->a:Lmd/a;
-
-    if-ne p0, p1, :cond_1
-
-    return-object p0
-
-    :cond_1
-    :goto_0
-    sget-object p0, Lkotlin/Unit;->a:Lkotlin/Unit;
-
-    return-object p0
+    return-object v0
 .end method
 
 .method public static b(Lcom/android/billingclient/api/Purchase;ILp3/b;)Ljava/lang/Object;

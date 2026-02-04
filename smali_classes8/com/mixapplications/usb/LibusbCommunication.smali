@@ -240,11 +240,9 @@
 .end method
 
 .method public static final synthetic e(Lcom/mixapplications/usb/LibusbCommunication;I)J
-    .locals 0
+    .locals 2
 
-    invoke-direct {p0, p1}, Lcom/mixapplications/usb/LibusbCommunication;->usbNativeInit(I)J
-
-    move-result-wide p0
+    const-wide/16 p0, 0x0
 
     return-wide p0
 .end method

@@ -1108,75 +1108,10 @@
 .end method
 
 .method public static d(Lp4/f3;)V
-    .locals 5
-
-    const-string v0, "build(...)"
-
-    :try_start_0
-    invoke-static {}, Lcom/android/billingclient/api/PendingPurchasesParams;->newBuilder()Lcom/android/billingclient/api/PendingPurchasesParams$Builder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/billingclient/api/PendingPurchasesParams$Builder;->enableOneTimeProducts()Lcom/android/billingclient/api/PendingPurchasesParams$Builder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/billingclient/api/PendingPurchasesParams$Builder;->build()Lcom/android/billingclient/api/PendingPurchasesParams;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/p;->e(Ljava/lang/Object;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/mixapplications/commons/MyApplication;->g:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {}, Lxd/a;->x()Lcom/mixapplications/commons/MyApplication;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/android/billingclient/api/BillingClient;->newBuilder(Landroid/content/Context;)Lcom/android/billingclient/api/BillingClient$Builder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lcom/android/billingclient/api/BillingClient$Builder;->enablePendingPurchases(Lcom/android/billingclient/api/PendingPurchasesParams;)Lcom/android/billingclient/api/BillingClient$Builder;
-
-    move-result-object v1
-
-    new-instance v2, Llg/a;
-
-    const/16 v3, 0xd
-
-    invoke-direct {v2, v3}, Llg/a;-><init>(I)V
-
-    invoke-virtual {v1, v2}, Lcom/android/billingclient/api/BillingClient$Builder;->setListener(Lcom/android/billingclient/api/PurchasesUpdatedListener;)Lcom/android/billingclient/api/BillingClient$Builder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/billingclient/api/BillingClient$Builder;->build()Lcom/android/billingclient/api/BillingClient;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/p;->e(Ljava/lang/Object;Ljava/lang/String;)V
-
-    sput-object v1, Lp3/j;->b:Lcom/android/billingclient/api/BillingClient;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    invoke-static {}, Lp3/j;->e()Lcom/android/billingclient/api/BillingClient;
-
-    move-result-object v0
-
-    new-instance v1, Lio/sentry/transport/r;
-
-    const/16 v2, 0x18
-
-    invoke-direct {v1, p0, v2}, Lio/sentry/transport/r;-><init>(Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v1}, Lcom/android/billingclient/api/BillingClient;->startConnection(Lcom/android/billingclient/api/BillingClientStateListener;)V
+    .locals 0
 
     return-void
-
-    :catch_0
-    move-exception v0
+.end method
 
     sget-object v1, Lcom/mixapplications/commons/MyActivity;->Companion:Lo3/k4;
 

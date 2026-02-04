@@ -43,11 +43,15 @@
 
     new-instance v0, Landroidx/lifecycle/MutableLiveData;
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-direct {v0, v1}, Landroidx/lifecycle/MutableLiveData;-><init>(Ljava/lang/Object;)V
 
     sput-object v0, Lp3/j;->c:Landroidx/lifecycle/MutableLiveData;
+
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lp3/j;->j:Z
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -1096,217 +1100,15 @@
 .end method
 
 .method public static c(Lcom/android/billingclient/api/Purchase;)I
-    .locals 4
+    .locals 0
 
-    sget-object v0, Lo3/x5;->a:Lo3/x5;
-
-    invoke-static {}, Lo3/x5;->c()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    sput-object v0, Lp3/j;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Lkotlin/Pair;
-
-    iget-object v2, v2, Lkotlin/Pair;->a:Ljava/lang/Object;
-
-    check-cast v2, Lcom/android/billingclient/api/Purchase;
-
-    invoke-virtual {v2}, Lcom/android/billingclient/api/Purchase;->getPurchaseToken()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Lcom/android/billingclient/api/Purchase;->getPurchaseToken()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/p;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    check-cast v1, Lkotlin/Pair;
-
-    if-nez v1, :cond_2
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    iget-object p0, v1, Lkotlin/Pair;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/lang/Number;
-
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_3
-
-    return v1
-
-    :cond_3
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_4
-
-    return v1
-
-    :cond_4
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
-
-    move-result p0
-
-    const/4 v0, 0x3
-
-    if-ne p0, v0, :cond_5
-
-    return v0
-
-    :cond_5
-    const/4 p0, 0x4
+    const/4 p0, 0x1
 
     return p0
 .end method
 
 .method public static d(Lp4/f3;)V
-    .locals 5
-
-    const-string v0, "build(...)"
-
-    :try_start_0
-    invoke-static {}, Lcom/android/billingclient/api/PendingPurchasesParams;->newBuilder()Lcom/android/billingclient/api/PendingPurchasesParams$Builder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/billingclient/api/PendingPurchasesParams$Builder;->enableOneTimeProducts()Lcom/android/billingclient/api/PendingPurchasesParams$Builder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/billingclient/api/PendingPurchasesParams$Builder;->build()Lcom/android/billingclient/api/PendingPurchasesParams;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/p;->e(Ljava/lang/Object;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/mixapplications/commons/MyApplication;->g:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {}, Lxd/a;->x()Lcom/mixapplications/commons/MyApplication;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/android/billingclient/api/BillingClient;->newBuilder(Landroid/content/Context;)Lcom/android/billingclient/api/BillingClient$Builder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lcom/android/billingclient/api/BillingClient$Builder;->enablePendingPurchases(Lcom/android/billingclient/api/PendingPurchasesParams;)Lcom/android/billingclient/api/BillingClient$Builder;
-
-    move-result-object v1
-
-    new-instance v2, Llg/a;
-
-    const/16 v3, 0xd
-
-    invoke-direct {v2, v3}, Llg/a;-><init>(I)V
-
-    invoke-virtual {v1, v2}, Lcom/android/billingclient/api/BillingClient$Builder;->setListener(Lcom/android/billingclient/api/PurchasesUpdatedListener;)Lcom/android/billingclient/api/BillingClient$Builder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/billingclient/api/BillingClient$Builder;->build()Lcom/android/billingclient/api/BillingClient;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/p;->e(Ljava/lang/Object;Ljava/lang/String;)V
-
-    sput-object v1, Lp3/j;->b:Lcom/android/billingclient/api/BillingClient;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    invoke-static {}, Lp3/j;->e()Lcom/android/billingclient/api/BillingClient;
-
-    move-result-object v0
-
-    new-instance v1, Lio/sentry/transport/r;
-
-    const/16 v2, 0x18
-
-    invoke-direct {v1, p0, v2}, Lio/sentry/transport/r;-><init>(Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v1}, Lcom/android/billingclient/api/BillingClient;->startConnection(Lcom/android/billingclient/api/BillingClientStateListener;)V
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    sget-object v1, Lcom/mixapplications/commons/MyActivity;->Companion:Lo3/k4;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Lcom/mixapplications/commons/MyActivity;->access$getInstance$cp()Lcom/mixapplications/commons/MyActivity;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/16 v3, 0xc
-
-    sget-object v4, Lp3/j;->a:Lp3/j;
-
-    invoke-static {v4, v1, v0, v2, v3}, Lp3/j;->i(Lp3/j;Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;I)V
-
-    :cond_0
-    invoke-static {}, Lge/c0;->d()Lsc/a;
-
-    move-result-object v0
-
-    new-instance v1, Lp3/a;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, p0, v2, v3}, Lp3/a;-><init>(Lp4/f3;Lkotlin/coroutines/Continuation;I)V
-
-    const/4 p0, 0x3
-
-    invoke-static {v0, v2, v2, v1, p0}, Lge/c0;->G(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lge/a0;Lkotlin/jvm/functions/Function2;I)Lge/r1;
+    .locals 0
 
     return-void
 .end method

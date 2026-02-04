@@ -434,7 +434,7 @@
 
     invoke-static {v11}, Lcom/appodeal/ads/Appodeal;->setChildDirectedTreatment(Ljava/lang/Boolean;)V
 
-    invoke-static {v6, v9}, Lcom/appodeal/ads/Appodeal;->setTriggerOnLoadedOnPrecache(IZ)V
+    # invoke-static {v6, v9}, Lcom/appodeal/ads/Appodeal;->setTriggerOnLoadedOnPrecache # DISABLED(IZ)V
 
     invoke-static {v9}, Lcom/appodeal/ads/Appodeal;->muteVideosIfCallsMuted(Z)V
 
@@ -718,7 +718,8 @@
 
     const/16 v3, 0x3c3
 
-    invoke-static {v12, v0, v3, v13}, Lcom/appodeal/ads/Appodeal;->initialize(Landroid/content/Context;Ljava/lang/String;ILcom/appodeal/ads/initializing/ApdInitializationCallback;)V
+    # invoke-static {v12, v0, v3, v13}, Lcom/appodeal/ads/Appodeal;->initialize(Landroid/content/Context;Ljava/lang/String;ILcom/appodeal/ads/initializing/ApdInitializationCallback;)V
+    # DISABLED: Appodeal ads initialization removed
 
     return-object v2
 

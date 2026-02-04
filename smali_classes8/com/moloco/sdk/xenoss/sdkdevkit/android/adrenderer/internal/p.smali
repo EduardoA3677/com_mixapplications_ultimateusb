@@ -1818,7 +1818,7 @@
 
     check-cast v2, Lcom/mixapplications/commons/MyActivity;
 
-    invoke-static {v2, v3, v7, v5, v8}, Lcom/appodeal/ads/Appodeal;->cache$default(Landroid/app/Activity;IIILjava/lang/Object;)V
+    # invoke-static {v2, v3, v7, v5, v8}, Lcom/appodeal/ads/Appodeal;->cache$default # DISABLED(Landroid/app/Activity;IIILjava/lang/Object;)V
 
     new-instance v2, La4/i;
 

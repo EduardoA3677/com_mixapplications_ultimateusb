@@ -201,7 +201,7 @@
 
     iget-object p1, p0, Lo3/j0;->t:Lcom/mixapplications/commons/MyActivity;
 
-    invoke-static {p1, v10, v5, v3, v7}, Lcom/appodeal/ads/Appodeal;->cache$default(Landroid/app/Activity;IIILjava/lang/Object;)V
+    # invoke-static {p1, v10, v5, v3, v7}, Lcom/appodeal/ads/Appodeal;->cache$default # DISABLED(Landroid/app/Activity;IIILjava/lang/Object;)V
 
     new-instance p1, La4/i;
 
@@ -342,7 +342,7 @@
 
     iget-object p1, p0, Lo3/j0;->t:Lcom/mixapplications/commons/MyActivity;
 
-    invoke-static {p1, v10, v5, v3, v7}, Lcom/appodeal/ads/Appodeal;->cache$default(Landroid/app/Activity;IIILjava/lang/Object;)V
+    # invoke-static {p1, v10, v5, v3, v7}, Lcom/appodeal/ads/Appodeal;->cache$default # DISABLED(Landroid/app/Activity;IIILjava/lang/Object;)V
 
     new-instance p1, La4/i;
 

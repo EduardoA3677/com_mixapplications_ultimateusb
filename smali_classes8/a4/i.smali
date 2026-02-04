@@ -1416,7 +1416,9 @@
 
     const/4 v3, 0x4
 
-    invoke-static {v0, v8, v2, v3, v2}, Lcom/appodeal/ads/Appodeal;->show$default(Landroid/app/Activity;ILjava/lang/String;ILjava/lang/Object;)Z
+    # invoke-static {v0, v8, v2, v3, v2}, Lcom/appodeal/ads/Appodeal;->show$default(Landroid/app/Activity;ILjava/lang/String;ILjava/lang/Object;)Z
+    # DISABLED: Appodeal ad display removed
+    const/4 v0, 0x0
 
     move-result v0
 
@@ -2552,7 +2554,9 @@
 
     const/16 v15, 0x40
 
-    invoke-static {v0, v15, v2, v3, v2}, Lcom/appodeal/ads/Appodeal;->show$default(Landroid/app/Activity;ILjava/lang/String;ILjava/lang/Object;)Z
+    # invoke-static {v0, v15, v2, v3, v2}, Lcom/appodeal/ads/Appodeal;->show$default(Landroid/app/Activity;ILjava/lang/String;ILjava/lang/Object;)Z
+    # DISABLED: Appodeal ad display removed
+    const/4 v0, 0x0
 
     move v13, v10
 

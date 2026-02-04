@@ -242,17 +242,6 @@
 .method public static final synthetic e(Lcom/mixapplications/usb/LibusbCommunication;I)J
     .locals 2
 
-    :try_start_0
-    invoke-direct {p0, p1}, Lcom/mixapplications/usb/LibusbCommunication;->usbNativeInit(I)J
-
-    move-result-wide p0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-wide p0
-
-    :catch_0
     const-wide/16 p0, 0x0
 
     return-wide p0
